@@ -30,7 +30,9 @@ router.post('/login', (req, res, next) => {
         // it's just a string that's just as good as valid credentials
         const token = tokenBuilder()
         res.status(200).json({
-          message: `Welcome back ${user.username}...`\})
+          message: `Welcome back ${user.username}...`,
+          token,
+        })
       } else {
         next({ status: 401, message: 'Invalid Credentials' })
       }
