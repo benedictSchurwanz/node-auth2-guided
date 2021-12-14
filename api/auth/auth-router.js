@@ -28,7 +28,7 @@ router.post('/login', (req, res, next) => {
       if (user && bcrypt.compareSync(password, user.password)) {
         // here we make this thing called token
         // it's just a string that's just as good as valid credentials
-        const token = tokenBuilder()
+        const token = tokenBuilder(user)
         res.status(200).json({
           message: `Welcome back ${user.username}...`,
           token,
