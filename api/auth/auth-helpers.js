@@ -7,8 +7,9 @@ function tokenBuilder(user) {
     role: user.role,
   }
   const options = {
-    expiresIn: ''
+    expiresIn: '1d'
   }
+  return jwt.sign()
 }
 
 
