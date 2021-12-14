@@ -1,7 +1,7 @@
 
 
 function tokenBuilder() {
-
+  return 'fake token'
 }
 
 
