@@ -1,4 +1,5 @@
 const jwt = require('jsonwebtoken')
+const {} = require('../../')
 
 function tokenBuilder(user) {
   const payload = {
@@ -9,7 +10,7 @@ function tokenBuilder(user) {
   const options = {
     expiresIn: '1d'
   }
-  return jwt.sign()
+  return jwt.sign(payload, ? , options)
 }
 
 
