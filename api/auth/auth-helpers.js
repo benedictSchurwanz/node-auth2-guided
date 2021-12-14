@@ -6,6 +6,9 @@ function tokenBuilder(user) {
     username: user.username,
     role: user.role,
   }
+  const options = {
+    expiresIn: ''
+  }
 }
 
 
