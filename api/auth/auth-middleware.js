@@ -4,7 +4,9 @@ const { JWT_SECRET } = require('../../config')
 // AUTHENTICATION
 const restricted = (req, res, next) => {
   const token = req.headers.authorization
-  
+  if (!token) {
+    return next({ status: 401, message: 'we wants token' })
+  }
 }
 
 // AUTHORIZATION
