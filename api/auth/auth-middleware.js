@@ -18,7 +18,9 @@ const restricted = (req, res, next) => {
 
 // AUTHORIZATION
 const checkRole = role => (req, res, next) => {
-  if ()
+  if (req.decodedJwt.role === role) {
+    next()
+  }
 }
 
 module.exports = {
