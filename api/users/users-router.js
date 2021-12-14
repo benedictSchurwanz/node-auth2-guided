@@ -4,7 +4,7 @@ const User = require("./users-model.js")
 
 const { restricted } = require('../auth/auth-middleware')
 
-router.get("/", restricted, (req, res, next) => {
+router.get("/", restricted, checkRole('admin'), (req, res, next) => {
   User.find()
     .then(users => {
       res.json(users)
