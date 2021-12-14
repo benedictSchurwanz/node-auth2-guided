@@ -11,6 +11,7 @@ const restricted = (req, res, next) => {
     if (err) {
       return next({ status: 401, message: `your token sucks: ${err.message}` })
     }
+    // here
   })
 }
 
