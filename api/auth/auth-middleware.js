@@ -17,8 +17,8 @@ const restricted = (req, res, next) => {
 }
 
 // AUTHORIZATION
-const checkRole = (req, res, next) => {
-  next()
+const checkRole = role => (req, res, next) => {
+  if ()
 }
 
 module.exports = {
