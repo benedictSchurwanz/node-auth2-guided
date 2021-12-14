@@ -1,7 +1,9 @@
 const jwt = require('jsonwebtoken')
 
-function tokenBuilder() {
-  return 'fake token'
+function tokenBuilder(user) {
+  const payload = {
+    
+  }
 }
 
 
